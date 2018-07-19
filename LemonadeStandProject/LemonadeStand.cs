@@ -5,7 +5,7 @@ namespace LemonadeStandProject
     {
         public string Name { get; set; }
         public int NumberOfCups { get; set; }
-        public decimal PricePerCup { get; set; }
-        public decimal CostPerCup { get; set; }
+        public double PricePerCup { get; set; }
+        public double CostPerCup { get; set; }
     }
 }

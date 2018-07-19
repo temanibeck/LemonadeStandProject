@@ -34,7 +34,11 @@ namespace LemonadeStandProject
 
             Console.WriteLine("I can tell that you have given some thought to the amount you want to spend per cup");
 
+            double netProfitPerCup = lemonadeStand.PricePerCup - lemonadeStand.CostPerCup;
 
+            double netProfitTotal = netProfitPerCup * lemonadeStand.NumberOfCups;
+
+            Console.WriteLine("After taking a closer look at your numbers you can anticipate earning $" + netProfitTotal + ".");
         }
     }
 }
