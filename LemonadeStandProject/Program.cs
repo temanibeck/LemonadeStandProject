@@ -21,6 +21,14 @@ namespace LemonadeStandProject
             lemonadeStand.NumberOfCups = int.Parse(Console.ReadLine());
 
             Console.WriteLine(lemonadeStand.NumberOfCups + " is a good number to start with especially since this is a new stand.");
+
+            Console.WriteLine("Now how much do you intend to sell each cup for?");
+
+            lemonadeStand.PricePerCup = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Customers paying $" + lemonadeStand.PricePerCup + " for each cup of lemonade is a perfect price point.");
+
+
         }
     }
 }
