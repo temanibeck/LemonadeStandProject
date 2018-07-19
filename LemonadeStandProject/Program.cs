@@ -7,51 +7,49 @@ namespace LemonadeStandProject
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello there! Thank you for expressing interest in opening your very own lemonade stand." +
+            Console.WriteLine("Hello there! Thank you for expressing interest in opening your very own lemonade stand(s)." +
                               "What is your name?");
 
             string userName = Console.ReadLine();
 
             Console.WriteLine(userName + ", how many stands would you like to open?");
 
-            int numberOfStands = Console.ReadLine();
+            int numberOfStands = int.Parse(Console.ReadLine());
 
             int number = 1;
-            List<LemonadeStand> standNames = new List<LemonadeStand>();
+            List<LemonadeStand> stands = new List<LemonadeStand>();
 
             for (int i = 0; i < numberOfStands; i++)
             {
-                LemonadeStand lemonadeStand = new LemonadeStand();
+                LemonadeStand newStand = new LemonadeStand();
 
-                Console.WriteLine("What would you like to call lemonade stand " + number + "?");
+                Console.WriteLine("What would you like to call lemonade stand " + number + " ?");
 
-                lemonadeStand.Name = Console.ReadLine();
+                newStand.Name = Console.ReadLine();
 
-                Console.WriteLine("Lemonade Stand " + number + "will be called " + lemonadeStand.Name + ".");
+                Console.WriteLine("Lemonade stand " + number + " will be called " + newStand.Name + ".");
 
-                Console.WriteLine("Now let's get down to the numbers. How many cups do you intend to sell?");
+                Console.WriteLine("How many cups do you intend to sell each day?");
 
-                lemonadeStand.NumberOfCups = Int32.Parse(Console.ReadLine());
+                newStand.NumberOfCups = Int32.Parse(Console.ReadLine());
 
-                Console.WriteLine(lemonadeStand.NumberOfCups + " is a good number to start with especially since this is a new stand.");
+                Console.WriteLine(newStand.NumberOfCups + " is a good number to start with especially since stand " + number + " is a newer stand.");
 
-                Console.WriteLine("Now how much do you intend to sell each cup for?");
+                Console.WriteLine("What will be the selling price for each cup?");
 
-                lemonadeStand.PricePerCup = decimal.Parse(Console.ReadLine());
+                newStand.PricePerCup = decimal.Parse(Console.ReadLine());
 
-                Console.WriteLine("Customers paying $" + lemonadeStand.PricePerCup + " for each cup of lemonade is a perfect price point.");
+                Console.WriteLine("Customers paying $" + newStand.PricePerCup + " for each cup of lemonade is a perfect price point.");
 
-                Console.WriteLine("Now tell me how much you intend to spend on ingredients needed to make each cup?");
+                Console.WriteLine("For stand " + number + ", how much do you intend to spend on ingredients for the needed to make each cup?");
 
-                lemonadeStand.CostPerCup = decimal.Parse(Console.ReadLine());
+                newStand.CostPerCup = decimal.Parse(Console.ReadLine());
 
-                Console.WriteLine("I can tell that you have given some thought to the amount you want to spend per cup");
+                Console.WriteLine("I can tell that you have given some thought to the amount you want to spend per cup.");
 
-                decimal netProfitPerCup 
+                Console.WriteLine(newStand.Outcome());
 
-                decimal netProfitTotal = netProfitPerCup * lemonadeStand1.NumberOfCups;
-
-                Console.WriteLine("After taking a closer look at your numbers you can anticipate earning $" + netProfitTotal + ".");
+                number++;
             }
 
         }
