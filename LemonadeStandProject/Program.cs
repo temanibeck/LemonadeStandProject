@@ -28,6 +28,12 @@ namespace LemonadeStandProject
 
             Console.WriteLine("Customers paying $" + lemonadeStand.PricePerCup + " for each cup of lemonade is a perfect price point.");
 
+            Console.WriteLine("Now tell me how much you intend to spend on ingredients needed to make each cup?");
+
+           lemonadeStand.CostPerCup = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("I can tell that you have given some thought to the amount you want to spend per cup");
+
 
         }
     }
