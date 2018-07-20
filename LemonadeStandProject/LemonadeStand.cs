@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LemonadeStandProject
 {
@@ -9,6 +10,12 @@ namespace LemonadeStandProject
         public decimal PricePerCup { get; set; }
         public decimal CostPerCup { get; set; }
 
+        public decimal GetTotalRevenue()
+        {
+            decimal totalRevenue = NumberOfCups * PricePerCup;
+            return totalRevenue;
+        }
+
         public string Outcome()
         {
             string message = " ";
@@ -16,9 +23,9 @@ namespace LemonadeStandProject
             decimal totalRevenue = NumberOfCups * PricePerCup;
             decimal totalExpenses = NumberOfCups * CostPerCup;
 
-            message += ("Your total profit per cup will be: " + profitPerCup + "." + 
-                              "\n Your total expenses will be: " + totalRevenue + "." + 
-                              "\n Your total profit will be: " + totalExpenses +  "." );
+            message += ("Your total profit per cup will be: " + profitPerCup + "." +
+                              "\n Your total expenses will be: " + totalRevenue + "." +
+                              "\n Your total profit will be: " + totalExpenses + ".");
 
             return message;
         }
