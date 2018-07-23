@@ -18,19 +18,28 @@ namespace LemonadeStandProject
 
         }
 
-        public static List<LemonadeStand> getOverallExpenses()
+        public static decimal getOverallExpenses()
         {
-            decimal OverallExpenses = NumberOfCups * CostPerCup
+            decimal OverallExpenses = 0;
+            foreach (LemonadeStand stand in Stands)
+            {
+                OverallExpenses += stand.GetTotalExpenses();
+            }
+            return OverallExpenses;
+
         }
 
-        public static List<LemonadeStand> getOverallProfit()
+        public static decimal getOverallProfit()
         {
-            decimal OverallProfit = PricePerCup - CostPerCup
+            decimal OverallProfit = 0;
+            foreach (LemonadeStand stand in Stands)
+            {
+                OverallProfit += stand.GetTotalProfit();
+            }
+            return OverallProfit;
+
         }
 
-        public decimal Revenue { get; set; }
-        public decimal Expenses { get; set; }
-        public decimal Profit { get; set; }
 
     }
 }

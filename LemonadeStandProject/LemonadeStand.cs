@@ -16,14 +16,26 @@ namespace LemonadeStandProject
             return totalRevenue;
         }
 
+        public decimal GetTotalExpenses()
+        {
+            decimal totalExpenses = NumberOfCups * CostPerCup;
+            return totalExpenses;
+        }
+
+        public decimal GetTotalProfit()
+        {
+            decimal totalProfit = (PricePerCup - CostPerCup) * NumberOfCups;
+            return totalProfit;
+        }
+
         public string Outcome()
         {
             string message = " ";
-            decimal profitPerCup = PricePerCup - CostPerCup;
+            decimal totalProfit = (PricePerCup - CostPerCup) * NumberOfCups;
             decimal totalRevenue = NumberOfCups * PricePerCup;
             decimal totalExpenses = NumberOfCups * CostPerCup;
 
-            message += ("Your total profit per cup will be: " + profitPerCup + "." +
+            message += ("Your total profit per cup will be: " + totalProfit + "." +
                               "\n Your total expenses will be: " + totalRevenue + "." +
                               "\n Your total profit will be: " + totalExpenses + ".");
 
