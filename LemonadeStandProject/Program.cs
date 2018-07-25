@@ -49,6 +49,8 @@ namespace LemonadeStandProject
 
                 Console.WriteLine(newStand.Outcome());
 
+
+
                 number++;
             }
 

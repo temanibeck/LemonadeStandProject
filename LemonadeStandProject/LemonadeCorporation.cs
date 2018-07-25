@@ -5,12 +5,13 @@ namespace LemonadeStandProject
 {
     public class LemonadeCorporation
     {
-        public List<LemonadeStand> Stands { get; set; }
+        public static List<LemonadeStand> LemonStands { get; set; }
+        public static List<PopsicleStand> PopStands { get; set; }
 
         public static decimal getOverallRevenue()
         {
             decimal OverallRevenue = 0;
-            foreach (LemonadeStand stand in Stands)
+            foreach (LemonadeStand stand in LemonStands)
             {
                 OverallRevenue += stand.GetTotalRevenue();
             }
@@ -21,7 +22,7 @@ namespace LemonadeStandProject
         public static decimal getOverallExpenses()
         {
             decimal OverallExpenses = 0;
-            foreach (LemonadeStand stand in Stands)
+            foreach (LemonadeStand stand in LemonStands)
             {
                 OverallExpenses += stand.GetTotalExpenses();
             }
@@ -32,7 +33,7 @@ namespace LemonadeStandProject
         public static decimal getOverallProfit()
         {
             decimal OverallProfit = 0;
-            foreach (LemonadeStand stand in Stands)
+            foreach (LemonadeStand stand in LemonStands)
             {
                 OverallProfit += stand.GetTotalProfit();
             }
