@@ -31,19 +31,19 @@ namespace LemonadeStandProject
 
                 Console.WriteLine("How many cups do you intend to sell each day?");
 
-                newStand.NumberOfCups = Int32.Parse(Console.ReadLine());
+                newStand.NumberOfItems = Int32.Parse(Console.ReadLine());
 
-                Console.WriteLine(newStand.NumberOfCups + " is a good number to start with especially since stand " + number + " is a newer stand.");
+                Console.WriteLine(newStand.NumberOfItems + " is a good number to start with especially since stand " + number + " is a newer stand.");
 
                 Console.WriteLine("What will be the selling price for each cup?");
 
-                newStand.PricePerCup = decimal.Parse(Console.ReadLine());
+                newStand.PricePerItem = decimal.Parse(Console.ReadLine());
 
-                Console.WriteLine("Customers paying $" + newStand.PricePerCup + " for each cup of lemonade is a perfect price point.");
+                Console.WriteLine("Customers paying $" + newStand.PricePerItem + " for each cup of lemonade is a perfect price point.");
 
                 Console.WriteLine("For stand " + number + ", how much do you intend to spend on ingredients for the needed to make each cup?");
 
-                newStand.CostPerCup = decimal.Parse(Console.ReadLine());
+                newStand.CostPerItem = decimal.Parse(Console.ReadLine());
 
                 Console.WriteLine("I can tell that you have given some thought to the amount you want to spend per cup.");
 
