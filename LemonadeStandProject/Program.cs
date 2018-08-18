@@ -12,9 +12,7 @@ namespace LemonadeStandProject
 
             string userName = Console.ReadLine();
 
-            Console.WriteLine(userName + ", how many stands would you like to open?");
-
-            int numberOfStands = int.Parse(Console.ReadLine());
+            int numberOfStands = UI.GetIntegerFromUser(userName + ", how many stands would you like to open?");
 
             int number = 1;
             List<LemonadeStand> stands = new List<LemonadeStand>();
@@ -37,13 +35,13 @@ namespace LemonadeStandProject
 
                 Console.WriteLine("What will be the selling price for each cup?");
 
-                newStand.PricePerItem = decimal.Parse(Console.ReadLine());
+                newStand.PricePerItems = decimal.Parse(Console.ReadLine());
 
-                Console.WriteLine("Customers paying $" + newStand.PricePerItem + " for each cup of lemonade is a perfect price point.");
+                Console.WriteLine("Customers paying $" + newStand.PricePerItems + " for each cup of lemonade is a perfect price point.");
 
                 Console.WriteLine("For stand " + number + ", how much do you intend to spend on ingredients for the needed to make each cup?");
 
-                newStand.CostPerItem = decimal.Parse(Console.ReadLine());
+                newStand.CostPerItems = decimal.Parse(Console.ReadLine());
 
                 Console.WriteLine("I can tell that you have given some thought to the amount you want to spend per cup.");
 
