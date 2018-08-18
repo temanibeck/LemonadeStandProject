@@ -18,22 +18,22 @@ namespace LemonadeStandProject
 
         public decimal GetTotalExpenses()
         {
-            decimal totalExpenses = NumberOfItems * CostPerItem;
+            decimal totalExpenses = NumberOfItems * CostPerItems;
             return totalExpenses;
         }
 
         public decimal GetTotalProfit()
         {
-            decimal totalProfit = (PricePerItem - CostPerItem) * NumberOfItems;
+            decimal totalProfit = (PricePerItems - CostPerItems) * NumberOfItems;
             return totalProfit;
         }
 
         public string Outcome()
         {
             string message = " ";
-            decimal totalProfit = (PricePerItem - CostPerItem) * NumberOfItems;
-            decimal totalRevenue = NumberOfItems * PricePerItem;
-            decimal totalExpenses = NumberOfItems * CostPerItem;
+            decimal totalProfit = (PricePerItems - CostPerItems) * NumberOfItems;
+            decimal totalRevenue = NumberOfItems * PricePerItems;
+            decimal totalExpenses = NumberOfItems * CostPerItems;
 
             message += ("Your total profit per item will be: " + totalProfit + "." +
                               "\n Your total expenses will be: " + totalRevenue + "." +
