@@ -12,9 +12,7 @@ namespace LemonadeStandProject
 
             string userName = Console.ReadLine();
 
-            Console.WriteLine(userName + ", how many stands would you like to open?");
-
-            int numberOfStands = int.Parse(Console.ReadLine());
+            int numberOfStands = UI.GetIntegerFromUser(userName + ", how many stands would you like to open?");
 
             int number = 1;
             List<LemonadeStand> stands = new List<LemonadeStand>();
